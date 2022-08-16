@@ -30,7 +30,7 @@ resource "aws_subnet" "kubernetes_subnets" {
   }
 }
 # Route table for demo_vpc
-resource "aws_route_table" "public_rt" {
+resource "aws_route_table" "kubernetes_public_rt" {
   vpc_id = aws_vpc.kubernetes.id
   route {
     cidr_block = "0.0.0.0/0"
